@@ -3,8 +3,8 @@
     font-family: Roboto, sans-serif;
 }
 
-/* ---------------------------- 
-   COLOUR AND FONT DESIGN STUFF 
+/* ----------------------------
+   COLOUR, FONT, AND IMG DESIGN
    ---------------------------- */
 
 ul {
@@ -16,21 +16,18 @@ a {
     color: black;
 }
 
-a:hover {
+.sidebar a:hover, button:hover {
     color: blue;
+    cursor: pointer;
 }
 
-a:active {
+.sidebar a:active, button:active {
     color: blueviolet;
 }
 
-.sidebar {
+.sidebar, button {
     background-color: lightblue;
     font-weight: bold;
-}
-
-.container {
-    font-size: xx-large;
 }
 
 .header {
@@ -49,17 +46,14 @@ a:active {
     background-color: wheat;
 }
 
-/* ------------
-   IMAGE SIZING 
-   ------------ */
-
 img {
     border-radius: 50%;
+    font-size: 16px;
 }
 
 img.small {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 img.big {
@@ -73,6 +67,28 @@ span.fa {
 
 span.big {
     font-size: 30px;
+}
+
+.header span {
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+input {
+    width: max(100px, 35vw);
+    font-size: 18px;
+    border-radius: 18px;
+    padding: 1px 8px;
+    background-color: whitesmoke;
+}
+
+.header-lower-left span:first-child {
+    font-size: 13px;
 }
 
 /* ----------------
@@ -130,8 +146,8 @@ li {
 }
 
 .header {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr;
@@ -146,8 +162,35 @@ li {
 
 .header-upper > *, .header-lower > * {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
+}
+
+/* had to make this as a flex container otherwise it's not vertically aligned :( */
+.header-upper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-lower-left div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-lower-left span:first-child {
+    padding-left: 2px;
+}
+
+.header-lower-right {
+    gap: 20px;
+}
+
+button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 0;
 }
 
 .cards {
