@@ -30,20 +30,12 @@ a {
     font-weight: bold;
 }
 
-.header {
+.header, .card, .side ul {
     background-color: white;
 }
 
 .main, .side {
     background-color: whitesmoke;
-}
-
-.card {
-    background-color: aquamarine;
-}
-
-.side-upper-content, .side-lower-content {
-    background-color: wheat;
 }
 
 img {
@@ -91,6 +83,11 @@ input {
     font-size: 13px;
 }
 
+.header, .card, .side ul {
+    box-shadow: 2px 2px 4px -1px gray;
+    z-index: 1;  /* so that the shadows are visible */
+}
+
 /* ----------------
    PLACEMENTS STUFF 
    ---------------- */
@@ -108,6 +105,14 @@ body {
 
 .sidebar, .header, .main, .side {
     padding: 15px;
+}
+
+.main {
+    padding-left: 25px;
+}
+
+.side {
+    padding-right: 25px;
 }
 
 .sidebar {
@@ -141,7 +146,7 @@ li {
 
 .container {
     display: grid;
-    grid-template-columns: 2.4fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 175px;
 }
 
@@ -195,7 +200,7 @@ button {
 
 .cards {
     display: grid;
-    gap: 15px;
+    gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -203,7 +208,11 @@ button {
     height: 250px;
 }
 
-.side-upper-content, .side-lower-content {
+.card, .side ul {
+    border-radius: 12px;
+}
+
+.side ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 100px;
