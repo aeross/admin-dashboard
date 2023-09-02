@@ -1,25 +1,32 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.outer {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-}
-
 
 /* ---------------------------- 
    COLOUR AND FONT DESIGN STUFF 
    ---------------------------- */
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: blueviolet;
+}
+
 .sidebar {
     background-color: lightblue;
+    font-weight: bold;
 }
 
 .container {
@@ -60,27 +67,66 @@ img.big {
     height: 65px;
 }
 
+span.fa {
+    font-size: 16px;
+}
+
+span.big {
+    font-size: 30px;
+}
+
 /* ----------------
    PLACEMENTS STUFF 
    ---------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.outer {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar, .header, .main, .side {
+    padding: 15px;
+}
 
 .sidebar {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    gap: 30px;
     /* sticks this sidebar in place when scrolling */
     position: sticky;
     top: 0;
+}
+
+.sidebar span.fa {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.sidebar ul a {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-top: 10px;
 }
 
 .container {
     display: grid;
     grid-template-columns: 2.4fr 1fr;
     grid-template-rows: 175px;
-}
-
-.header, .main, .side {
-    padding: 15px;
 }
 
 .header {
