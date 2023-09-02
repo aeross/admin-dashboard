@@ -23,13 +23,15 @@ body {
 }
 
 .container {
-    background-color: darkgray;
-    color: white;
     font-size: xx-large;
 }
 
-.container > * {
-    border: 2px dotted red;
+.header {
+    background-color: white;
+}
+
+.main, .side {
+    background-color: whitesmoke;
 }
 
 .card {
@@ -40,6 +42,23 @@ body {
     background-color: wheat;
 }
 
+/* ------------
+   IMAGE SIZING 
+   ------------ */
+
+img {
+    border-radius: 50%;
+}
+
+img.small {
+    width: 35px;
+    height: 35px;
+}
+
+img.big {
+    width: 65px;
+    height: 65px;
+}
 
 /* ----------------
    PLACEMENTS STUFF 
@@ -57,15 +76,32 @@ body {
 .container {
     display: grid;
     grid-template-columns: 2.4fr 1fr;
-    grid-template-rows: 150px;
-}
-
-.header {
-    grid-column: span 2;
+    grid-template-rows: 175px;
 }
 
 .header, .main, .side {
     padding: 15px;
+}
+
+.header {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    gap: 25px;
+}
+
+.header-upper, .header-lower {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-upper > *, .header-lower > * {
+    display: flex;
+    gap: 25px;
+    align-items: center;
 }
 
 .cards {
