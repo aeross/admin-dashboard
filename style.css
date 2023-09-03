@@ -48,6 +48,11 @@ img.small {
     height: 30px;
 }
 
+img.medium {
+    width: 40px;
+    height: 40px;
+}
+
 img.big {
     width: 65px;
     height: 65px;
@@ -87,6 +92,23 @@ p.small {
     margin: 5px 0;
 }
 
+p.x-small {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.card p.small, .side-upper p.x-small, .side-lower p:last-child {
+    color: rgb(90, 90, 90);
+}
+
+.side-upper p.small {
+    font-weight: bolder;
+}
+
+.side-lower ul p {
+    margin: 2px 0;
+}
+
 input {
     width: max(100px, 35vw);
     font-size: 18px;
@@ -106,6 +128,10 @@ input {
 
 .vertical-stripe {
     background-color: lightblue;
+}
+
+.side-upper li:not(:last-child) {
+    border-bottom: 1px solid grey;
 }
 
 /* ----------------
@@ -260,6 +286,18 @@ button {
 
 .side ul {
     display: grid;
+    padding: 10px 25px;
     grid-template-columns: 1fr;
     grid-auto-rows: 100px;
+}
+
+.side-lower ul {
+    grid-auto-rows: 75px;
+}
+
+.side-lower li {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
