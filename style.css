@@ -16,12 +16,12 @@ a {
     color: black;
 }
 
-.sidebar a:hover, button:hover {
+a:hover, button:hover {
     color: blue;
     cursor: pointer;
 }
 
-.sidebar a:active, button:active {
+a:active, button:active {
     color: blueviolet;
 }
 
@@ -57,6 +57,10 @@ span.fa {
     font-size: 16px;
 }
 
+.card span.fa {
+    font-size: 20px;
+}
+
 span.big {
     font-size: 30px;
 }
@@ -66,9 +70,21 @@ span.big {
     font-weight: bolder;
 }
 
-p {
+p.big {
     font-size: 20px;
     font-weight: bolder;
+    margin: 20px 0 15px 3px;
+}
+
+p.medium {
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 8px 0;
+}
+
+p.small {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 input {
@@ -80,12 +96,16 @@ input {
 }
 
 .header-lower-left span:first-child {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .header, .card, .side ul {
     box-shadow: 2px 2px 4px -1px gray;
     z-index: 1;  /* so that the shadows are visible */
+}
+
+.vertical-stripe {
+    background-color: lightblue;
 }
 
 /* ----------------
@@ -146,7 +166,7 @@ li {
 
 .container {
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 2.6fr 1fr;
     grid-template-rows: 175px;
 }
 
@@ -201,11 +221,38 @@ button {
 .cards {
     display: grid;
     gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
 .card {
     height: 250px;
+    display: flex;
+}
+
+.vertical-stripe {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 8px;
+    border-radius: 12px 0 0 12px;
+}
+
+.content {
+    padding: 10px 15px 10px 25px;
+    display: grid;
+    grid-template-rows: auto 70px;
+    align-items: center;
+}
+
+.actions {
+    padding-right: 25px;
+    display: flex;
+    gap: 35px;
+    justify-content: end;
+}
+
+/* again, the icons' placements are a little bit odd */
+.actions a:last-child {
+    padding-left: 2px;
 }
 
 .card, .side ul {
