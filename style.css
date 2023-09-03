@@ -237,10 +237,9 @@ button {
 }
 
 .content {
-    padding: 10px 15px 10px 25px;
+    padding: 15px 15px 10px 25px;
     display: grid;
-    grid-template-rows: auto 70px;
-    align-items: center;
+    grid-template-rows: auto 40px;
 }
 
 .actions {
